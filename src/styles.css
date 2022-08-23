@@ -25,10 +25,10 @@ body {
 
   display: grid;
   grid-template-areas: 
-  'counter-dias counter-dias' 
-  'counter-horas counter-horas' 
-  'counter-minutos counter-minutos' 
-  'counter-segundos counter-segundos';
+  'counter-dias' 
+  'counter-horas' 
+  'counter-minutos' 
+  'counter-segundos';
 
   
 }
@@ -69,12 +69,15 @@ body {
   
 }
 
-@media screen and (min-width: 700px) {
+
+@media only screen and (min-width: 700px) {
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(194, 27, 27);
+  }
   .counter-dashboard {
-    background-color: aqua;
+    max-width: 1200px;
     grid-template-areas: 
-    'counter-dias counter-horas counter-minutos counter-segundos'
-    'counter-dias counter-horas counter-minutos counter-segundos'
     'counter-dias counter-horas counter-minutos counter-segundos'
     ;
 

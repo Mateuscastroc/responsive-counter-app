@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: rgb(39, 39, 39);
+}
+.app-header {
+  font-family: 'Roboto', sans-serif;
+  color: #ffff;
+  font-weight: 700;
+
+  background-color: rgb(65, 64, 64);
+  box-shadow: 0 0 5px rgb(94, 93, 93);
+  margin-bottom:10px ;
+  padding: 1rem;
+}
+.counter-dashboard {
+  text-align: center;
+  font-weight: 700;
+  color: #ffff;
+
+  display: grid;
+  grid-template-areas: 
+  'counter-dias counter-dias' 
+  'counter-horas counter-horas' 
+  'counter-minutos counter-minutos' 
+  'counter-segundos counter-segundos';
+
+  
+}
+.counter-dias {
+  padding: 3rem;
+  background: yellow;
+  grid-area: "counter-dias";
+}
+.counter-horas {
+  padding: 3rem;
+  background: rgb(240, 94, 9);
+  grid-area: "counter-horas";
+}
+.counter-minutos {
+  padding: 3rem;
+  background: red;
+  grid-area: "counter-minutos";
+}
+.counter-segundos {
+  padding: 3rem;
+  background: purple;
+  grid-area: "counter-segundos";
+}
+.button-form {
+  font-weight: bold;
+  color: rgb(51, 51, 51);
+
+  background: rgba(87, 235, 42, 0.904);
+  border: none;
+  padding: 15px 32px;
+  border-radius: 6px;
+}
+
+.counter-form {
+  margin-top: 3rem;
+  margin-left: 40%;
+  display: inline-block;
+  
+}
+
+@media screen and (min-width: 700px) {
+  .counter-dashboard {
+    background-color: aqua;
+    grid-template-areas: 
+    'counter-dias counter-horas counter-minutos counter-segundos'
+    'counter-dias counter-horas counter-minutos counter-segundos'
+    'counter-dias counter-horas counter-minutos counter-segundos'
+    ;
+
+
+  }
+}

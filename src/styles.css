@@ -6,20 +6,36 @@
 }
 body {
   font-family: 'Roboto', sans-serif;
-  background: rgb(39, 39, 39);
+  background: rgb(65, 64, 64);
+  
+}
+h1, p {
+  font-size: 4rem;
 }
 .app-header {
   font-family: 'Roboto', sans-serif;
   color: #ffff;
   font-weight: 700;
 
-  background-color: rgb(65, 64, 64);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  background-color:  rgb(39, 39, 39);
   box-shadow: 0 0 5px rgb(94, 93, 93);
   margin-bottom:10px ;
   padding: 1rem;
 }
+
+.image-header {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
 .counter-dashboard {
   text-align: center;
+  align-items: center;
   font-weight: 700;
   color: #ffff;
 
@@ -30,52 +46,67 @@ body {
   'counter-minutos' 
   'counter-segundos';
 
+  grid-auto-columns: minmax(0 ,1fr);
+
+  margin: auto;
+
   
 }
 .counter-dias {
   padding: 3rem;
-  background: yellow;
   grid-area: "counter-dias";
 }
 .counter-horas {
   padding: 3rem;
-  background: rgb(240, 94, 9);
   grid-area: "counter-horas";
 }
 .counter-minutos {
   padding: 3rem;
-  background: red;
   grid-area: "counter-minutos";
 }
 .counter-segundos {
   padding: 3rem;
-  background: purple;
   grid-area: "counter-segundos";
 }
 .button-form {
   font-weight: bold;
   color: rgb(51, 51, 51);
 
-  background: rgba(87, 235, 42, 0.904);
+  background: rgba(58, 161, 26, 0.904);
   border: none;
   padding: 15px 32px;
   border-radius: 6px;
 }
+.button-form:hover {
+  cursor: pointer;
+  background: rgba(73, 230, 26, 0.904);
+
+}
 
 .counter-form {
-  margin-top: 3rem;
-  margin-left: 40%;
-  display: inline-block;
-  
+  display: grid;
+  grid-template-areas:
+    
+    '. template .'
+    '. template .'
+    '. template .'
+  ;
+  margin: auto;
+  justify-content: center;
+}
+
+input, button {
+  margin: 0 1rem;
+  padding: 0 4rem;
 }
 
 
 @media only screen and (min-width: 700px) {
   body {
     font-family: 'Roboto', sans-serif;
-    background: rgb(194, 27, 27);
   }
   .counter-dashboard {
+    margin-top: 200px;
     max-width: 1200px;
     grid-template-areas: 
     'counter-dias counter-horas counter-minutos counter-segundos'

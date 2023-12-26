@@ -38,4 +38,4 @@ function getUserDate() {
   console.log('Minutos restantes', remainingMinutes)
   console.log('Segundos restantes', remainingSeconds)*/
 }
-setInterval(getUserDate, 1000)
+//setInterval(getUserDate, 1000)
